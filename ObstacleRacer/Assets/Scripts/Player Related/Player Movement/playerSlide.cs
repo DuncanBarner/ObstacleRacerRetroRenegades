@@ -11,9 +11,10 @@ public class playerSlide: MonoBehaviour
     public CapsuleCollider2D slideColli;
     public float slideSpeed = 800f;
     public bool isSliding = false;
+    public ForceMode2D forceMode;
 
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (Input.GetKeyDown(KeyCode.LeftShift) && !pC.OnWall())
             slide();
@@ -30,11 +31,11 @@ public class playerSlide: MonoBehaviour
 
         if (pC.getHorizontalInput() > 0 && !PauseMenu.isPaused)
             {
-             rb.AddForce(Vector2.right * slideSpeed); // Facing right
+             rb.AddForce(Vector2.right * slideSpeed,forceMode); // Facing right
             }
         else
             {
-             rb.AddForce(Vector2.left * slideSpeed); // Facing Left
+             rb.AddForce(Vector2.left * slideSpeed,forceMode); // Facing Left
             }
 
         StartCoroutine("stopSlide");
