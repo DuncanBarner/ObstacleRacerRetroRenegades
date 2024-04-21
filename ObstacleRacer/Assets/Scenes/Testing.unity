@@ -424,6 +424,14 @@ PrefabInstance:
       value: 0.010553002
       objectReference: {fileID: 0}
     - target: {fileID: 3122926768456174486, guid: 79e7441b390cbb24497f01508a1d7480, type: 3}
+      propertyPath: pS
+      value: 
+      objectReference: {fileID: 1867923208}
+    - target: {fileID: 3122926768456174486, guid: 79e7441b390cbb24497f01508a1d7480, type: 3}
+      propertyPath: forceMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122926768456174486, guid: 79e7441b390cbb24497f01508a1d7480, type: 3}
       propertyPath: wallCheck
       value: 
       objectReference: {fileID: 891867131}
@@ -457,11 +465,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3122926768456174488, guid: 79e7441b390cbb24497f01508a1d7480, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.93
+      value: 1.79
       objectReference: {fileID: 0}
     - target: {fileID: 3122926768456174488, guid: 79e7441b390cbb24497f01508a1d7480, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.67
+      value: 2.45
       objectReference: {fileID: 0}
     - target: {fileID: 3122926768456174488, guid: 79e7441b390cbb24497f01508a1d7480, type: 3}
       propertyPath: m_LocalPosition.z
@@ -845,7 +853,7 @@ MonoBehaviour:
   animator: {fileID: 1867923213}
   regularColli: {fileID: 1867923207}
   slideColli: {fileID: 1449597950}
-  slideSpeed: 800
+  slideSpeed: 10
   isSliding: 0
   forceMode: 1
 --- !u!114 &1867923209 stripped

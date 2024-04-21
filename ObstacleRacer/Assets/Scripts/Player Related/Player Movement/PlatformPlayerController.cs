@@ -31,12 +31,14 @@ public class PlatformPlayerController : MonoBehaviour
     private float wallJumpingCounter;
     private float wallJumpingDuration = 0.4f;
     private Vector2 wallJumpPower = new Vector2(8f, 16f);
+    [SerializeField] ForceMode2D forceMode;
     
     private Animator animator;
     [SerializeField] private AudioClip jumpSoundClip;
    
     [SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
+    public playerSlide pS;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -89,6 +91,11 @@ public class PlatformPlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (pS.isSliding)
+        {
+            return;
+        }
+
         rb.velocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
 
         // Flip the player sprite based on movement direction
@@ -145,7 +152,7 @@ public class PlatformPlayerController : MonoBehaviour
         if(Input.GetButtonDown("Jump") && wallJumpingCounter>0f)
         {
             isWallJumping = true;
-            rb.velocity = new Vector2(wallJumpingDirection * wallJumpPower.x, wallJumpPower.y);
+            rb.AddForce(wallJumpPower,forceMode);
             wallJumpingCounter = 0f;
 
             if(transform.localScale.x != wallJumpingDirection)

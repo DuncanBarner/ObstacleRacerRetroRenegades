@@ -14,7 +14,7 @@ public class playerSlide: MonoBehaviour
     public ForceMode2D forceMode;
 
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.LeftShift) && !pC.OnWall())
             slide();
@@ -29,26 +29,21 @@ public class playerSlide: MonoBehaviour
         regularColli .enabled = false;
         slideColli .enabled = true;
 
-        if (pC.getHorizontalInput() > 0 && !PauseMenu.isPaused)
-            {
-             rb.AddForce(Vector2.right * slideSpeed,forceMode); // Facing right
-            }
-        else
-            {
-             rb.AddForce(Vector2.left * slideSpeed,forceMode); // Facing Left
-            }
+        rb.AddForce(new Vector2(rb.velocity.x * slideSpeed,rb.velocity.y), forceMode);
 
         StartCoroutine("stopSlide");
     }
 
     IEnumerator stopSlide()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.1f);
         //animator.Play("");
         animator.SetBool("isSliding", false);
         regularColli.enabled = true;
         slideColli.enabled = false;
         isSliding = false;
     }
+
+    public bool getIsSliding() { return isSliding; }
 
 }
