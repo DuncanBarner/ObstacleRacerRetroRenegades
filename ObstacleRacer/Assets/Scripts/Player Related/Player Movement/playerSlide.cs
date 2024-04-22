@@ -10,13 +10,15 @@ public class playerSlide: MonoBehaviour
     public CapsuleCollider2D regularColli;
     public CapsuleCollider2D slideColli;
     public float slideSpeed = 800f;
+    public float slideCD = 1.5f;
     public bool isSliding = false;
     public ForceMode2D forceMode;
 
-
+    private float timePassed = 0.0f;
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift) && !pC.OnWall())
+        timePassed += Time.deltaTime;
+        if (Input.GetKeyDown(KeyCode.LeftShift) && !pC.OnWall() && slideCD < timePassed)
             slide();
     }
 
@@ -42,6 +44,7 @@ public class playerSlide: MonoBehaviour
         regularColli.enabled = true;
         slideColli.enabled = false;
         isSliding = false;
+        timePassed = 0.0f;
     }
 
     public bool getIsSliding() { return isSliding; }
