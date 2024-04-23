@@ -25,12 +25,13 @@ public class PlatformPlayerController : MonoBehaviour
     private bool isJumping;
     private float jumpTimeCounter;
 
+    //Walljump related vars
+    public Vector2 wallJumpPower = new Vector2(8f, 16f);
     private bool isWallJumping;
     private float wallJumpingDirection;
     private float wallJumpingTime = 0.2f;
     private float wallJumpingCounter;
     private float wallJumpingDuration = 0.4f;
-    private Vector2 wallJumpPower = new Vector2(8f, 16f);
     [SerializeField] ForceMode2D forceMode;
     
     private Animator animator;
@@ -96,6 +97,11 @@ public class PlatformPlayerController : MonoBehaviour
             return;
         }
 
+        if(isWallJumping)
+        {
+            return;
+        }
+
         rb.velocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
 
         // Flip the player sprite based on movement direction
@@ -152,7 +158,18 @@ public class PlatformPlayerController : MonoBehaviour
         if(Input.GetButtonDown("Jump") && wallJumpingCounter>0f)
         {
             isWallJumping = true;
-            rb.AddForce(wallJumpPower,forceMode);
+            if (wallJumpingDirection > 0)
+            {
+                rb.AddForce(wallJumpPower, forceMode);
+            }
+            else
+            {
+                rb.AddForce(new Vector2(-wallJumpPower.x, wallJumpPower.y), forceMode);
+            }
+            if(rb.velocity.y >16f)
+            {
+                rb.velocity = new Vector2(rb.velocity.x,16f);
+            }
             wallJumpingCounter = 0f;
 
             if(transform.localScale.x != wallJumpingDirection)
