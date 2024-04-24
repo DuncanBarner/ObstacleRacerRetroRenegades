@@ -31,7 +31,10 @@ public class playerSlide: MonoBehaviour
         regularColli .enabled = false;
         slideColli .enabled = true;
 
-        rb.AddForce(new Vector2(rb.velocity.x * slideSpeed,rb.velocity.y), forceMode);
+        if (pC.getHorizontalInput() > 0)
+            rb.AddForce(Vector2.right * slideSpeed, forceMode);
+        else
+            rb.AddForce(Vector2.left * slideSpeed, forceMode);
 
         StartCoroutine("stopSlide");
     }

@@ -29,9 +29,9 @@ public class PlatformPlayerController : MonoBehaviour
     public Vector2 wallJumpPower = new Vector2(8f, 16f);
     private bool isWallJumping;
     private float wallJumpingDirection;
-    private float wallJumpingTime = 0.2f;
+    [SerializeField] private float wallJumpingTime = 0.2f;
     private float wallJumpingCounter;
-    private float wallJumpingDuration = 0.4f;
+    private float wallJumpingDuration = 0.2f;
     [SerializeField] ForceMode2D forceMode;
     
     private Animator animator;
@@ -67,7 +67,7 @@ public class PlatformPlayerController : MonoBehaviour
         }
 
         // Check for jump input
-        if (Input.GetButtonDown("Jump") && (isGrounded || jumpTimeCounter > 0 && !OnWall()) && !PauseMenu.isPaused)
+        if (Input.GetButtonDown("Jump") && (isGrounded || jumpTimeCounter > 0 /*&& !OnWall()*/)&& !PauseMenu.isPaused)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             isJumping = true;
@@ -77,7 +77,7 @@ public class PlatformPlayerController : MonoBehaviour
         WallJump();
 
         // Variable Jump Height: Allow higher jumps by holding the jump button
-        if (Input.GetButtonUp("Jump") && isJumping)
+        if (Input.GetButtonUp("Jump") && isJumping && !isWallJumping)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * variableJumpHeightMultiplier);
             isJumping = false;
@@ -93,6 +93,10 @@ public class PlatformPlayerController : MonoBehaviour
     void FixedUpdate()
     {
         if(isWallJumping)
+        {
+            return;
+        }
+        if(!isGrounded && horizontalInput==0)
         {
             return;
         }
@@ -116,6 +120,7 @@ public class PlatformPlayerController : MonoBehaviour
         // Visualize the ground check radius in the Scene view
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
+        Gizmos.DrawWireSphere(wallCheck.position, 0.2f);
     }
 
     public bool OnWall()
@@ -188,6 +193,7 @@ public class PlatformPlayerController : MonoBehaviour
     private void StopWallJumping()
     {
         isWallJumping = false;
+        rb.velocity = new Vector2(rb.velocity.x, 5f);
     }
     public float getHorizontalInput() { return horizontalInput;}
 }
