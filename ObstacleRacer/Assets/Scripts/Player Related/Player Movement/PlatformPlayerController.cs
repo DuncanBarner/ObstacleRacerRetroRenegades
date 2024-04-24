@@ -92,18 +92,14 @@ public class PlatformPlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (pS.isSliding)
-        {
-            return;
-        }
-
         if(isWallJumping)
         {
             return;
         }
-
-        rb.velocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
-
+        if(!pS.isSliding)
+        {
+            rb.velocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
+        }
         // Flip the player sprite based on movement direction
         if (horizontalInput > 0 && !PauseMenu.isPaused)
         {
@@ -178,6 +174,11 @@ public class PlatformPlayerController : MonoBehaviour
                 localScale.x *= -1f;
                 transform.localScale = localScale;
 
+            }
+
+            if (rb.velocity.y < 0 && !isGrounded)
+            {
+                rb.velocity += Vector2.up * Physics2D.gravity.y * (fallingSpeed - 1) * Time.deltaTime;
             }
 
             Invoke(nameof(StopWallJumping), wallJumpingDuration);
