@@ -107,11 +107,11 @@ public class PlatformPlayerController : MonoBehaviour
         // Flip the player sprite based on movement direction
         if (horizontalInput > 0 && !PauseMenu.isPaused)
         {
-            transform.localScale = new Vector3(2f, 2f, 1f); // Facing right
+            transform.localScale = new Vector3(1f, 1f, 1f); // Facing right
         }
         else if (horizontalInput < 0 && !PauseMenu.isPaused)
         {
-            transform.localScale = new Vector3(-2f, 2f, 1f); // Facing Left
+            transform.localScale = new Vector3(-1f, 1f, 1f); // Facing Left
         }
     }
 
