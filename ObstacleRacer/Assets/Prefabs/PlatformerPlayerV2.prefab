@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 5619634686805385288}
   m_LocalRotation: {x: -0, y: -0, z: 0.0033430788, w: 0.9999944}
   m_LocalPosition: {x: -0.512, y: -0.869, z: 0}
-  m_LocalScale: {x: 1, y: 0.8125, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7397776606136921164}
   m_RootOrder: 1
@@ -71,8 +71,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5619634687320290382}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.328, y: -0.11, z: 0}
-  m_LocalScale: {x: 0.85579, y: 0.85579, z: 0.85579}
+  m_LocalPosition: {x: 0.65, y: -0.11, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7397776606136921164}
   m_RootOrder: 2
@@ -101,7 +101,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7397776605402510092}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.06, y: -0.622, z: 0}
+  m_LocalPosition: {x: -0.06, y: -1.28, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7397776606136921164}
@@ -186,15 +186,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 83645745ac32853498e70b4b712c3316, type: 3}
-  m_Color: {r: 0.9622642, g: 0.9516844, b: 0.55072975, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 8da01587918215240a3d4a636f947d5b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.6, y: 2.6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &7397776606136921155
@@ -231,8 +231,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.005276561, y: 0.010553002}
-  m_Size: {x: 0.67285514, y: 1.0713303}
+  m_Offset: {x: 0.0063123703, y: -0.003900528}
+  m_Size: {x: 1.6305618, y: 2.596531}
   m_Direction: 0
 --- !u!114 &7397776606136921154
 MonoBehaviour:
@@ -304,6 +304,6 @@ MonoBehaviour:
   regularColli: {fileID: 7397776606136921152}
   slideColli: {fileID: 5619634686805385290}
   slideSpeed: 30
-  slideCD: 1.5
+  slideCD: 0.5
   isSliding: 0
   forceMode: 1
