@@ -45713,6 +45713,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5619634685879420092, guid: 284479a1168244c4681a194b88c36b63, type: 3}
+      propertyPath: slideCD
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5619634685879420092, guid: 284479a1168244c4681a194b88c36b63, type: 3}
+      propertyPath: slideSpeed
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 7397776606136921154, guid: 284479a1168244c4681a194b88c36b63, type: 3}
       propertyPath: moveSpeed
       value: 10

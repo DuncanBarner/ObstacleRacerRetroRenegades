@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d62a999d922769c45b7acda32f5de585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 10
   jumpForce: 10
   groundLayer:
     serializedVersion: 2
@@ -256,7 +256,8 @@ MonoBehaviour:
   coyoteTime: 0.1
   variableJumpHeightMultiplier: 0.5
   fallingSpeed: 2
-  wallJumpPower: {x: 8, y: 16}
+  wallJumpPower: {x: 12, y: 18}
+  wallJumpingTime: 0.2
   forceMode: 1
   jumpSoundClip: {fileID: 0}
   wallCheck: {fileID: 5619634687320290383}
@@ -302,7 +303,7 @@ MonoBehaviour:
   animator: {fileID: 5619634685879420089}
   regularColli: {fileID: 7397776606136921152}
   slideColli: {fileID: 5619634686805385290}
-  slideSpeed: 10
+  slideSpeed: 30
   slideCD: 1.5
   isSliding: 0
   forceMode: 1
