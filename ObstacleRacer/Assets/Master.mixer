@@ -21,6 +21,7 @@ AudioMixerGroupController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: SFX
+  m_AudioMixer: {fileID: 24100000}
   m_GroupID: 49f631d9e92eb054db79daa4e91a9b5c
   m_Children: []
   m_Volume: 4985479d1e21dcd4f8673a997a85553f
