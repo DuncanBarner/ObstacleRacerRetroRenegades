@@ -13,12 +13,13 @@ public class playerSlide: MonoBehaviour
     public float slideCD = 1.5f;
     public bool isSliding = false;
     public ForceMode2D forceMode;
+    public AudioClip slideSFX;
 
     private float timePassed = 0.0f;
     private void Update()
     {
         timePassed += Time.deltaTime;
-        if (Input.GetKeyDown(KeyCode.LeftShift) && !pC.OnWall() && slideCD < timePassed)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && !pC.OnWall() && slideCD < timePassed && !PauseMenu.isPaused)
             slide();
     }
 
@@ -35,6 +36,8 @@ public class playerSlide: MonoBehaviour
             rb.AddForce(Vector2.right * slideSpeed, forceMode);
         else
             rb.AddForce(Vector2.left * slideSpeed, forceMode);
+
+        SoundFXManager.instance.PlaySoundFXCLip(slideSFX, transform, 1f);
 
         StartCoroutine("stopSlide");
     }

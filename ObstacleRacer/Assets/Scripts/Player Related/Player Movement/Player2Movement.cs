@@ -27,6 +27,7 @@ public class Player2Movement : MonoBehaviour
 
     //Walljump related vars
     public Vector2 wallJumpPower = new Vector2(8f, 16f);
+    public AudioClip wallJump;
     private bool isWallJumping;
     private float wallJumpingDirection;
     [SerializeField] private float wallJumpingTime = 0.2f;
@@ -72,7 +73,7 @@ public class Player2Movement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             isJumping = true;
             jumpTimeCounter = 0;
-            //SoundFXManager.instance.PlaySoundFXCLip(jumpSoundClip, transform, 1f);
+            SoundFXManager.instance.PlaySoundFXCLip(jumpSoundClip, transform, 1f);
         }
         WallJump();
 
@@ -171,6 +172,7 @@ public class Player2Movement : MonoBehaviour
             {
                 rb.velocity = new Vector2(rb.velocity.x, 16f);
             }
+            SoundFXManager.instance.PlaySoundFXCLip(wallJump, transform, 1f);
             wallJumpingCounter = 0f;
 
             if (transform.localScale.x != wallJumpingDirection)
