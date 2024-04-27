@@ -54,7 +54,6 @@ public class PlatformPlayerController : MonoBehaviour
     void Update()
     {
         horizontalInput = Input.GetAxis("Horizontal");
-        animator.SetFloat("Speed", Mathf.Abs(horizontalInput));
 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
@@ -62,7 +61,6 @@ public class PlatformPlayerController : MonoBehaviour
         if (isGrounded)
         {
             jumpTimeCounter = coyoteTime;
-            animator.SetBool("IsJumping", false);
         }
         else
         {
@@ -74,7 +72,6 @@ public class PlatformPlayerController : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             isJumping = true;
-            animator.SetBool("IsJumping", true);
             jumpTimeCounter = 0;
             SoundFXManager.instance.PlaySoundFXCLip(jumpSoundClip, transform, 1f);
         }
