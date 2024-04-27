@@ -123,11 +123,17 @@ public class PlatformPlayerController : MonoBehaviour
         Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
     }
 
+   /// <summary>
+   /// Checks to see if Player is on wall
+   /// </summary>
     public bool OnWall()
     {
         return Physics2D.OverlapCircle(wallCheck.position, 0.2f, wallLayer);
     }
 
+    /// <summary>
+    /// Checks to see if player is pushing into a wall while airborn and slows players descedant if true
+    /// </summary>
     private void WallSlide()
     {
         if (OnWall() && !isGrounded &&horizontalInput!=0f )
