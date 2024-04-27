@@ -219,6 +219,7 @@ GameObject:
   - component: {fileID: 7397776606136921154}
   - component: {fileID: 5619634685879420089}
   - component: {fileID: 5619634685879420092}
+  - component: {fileID: 6334362184699423099}
   m_Layer: 0
   m_Name: PlatformerPlayerV2
   m_TagString: Player
@@ -407,3 +408,17 @@ MonoBehaviour:
   isSliding: 0
   forceMode: 1
   slideSFX: {fileID: 8300000, guid: 3e7ae407dcfba5444acfa345169527d0, type: 3}
+--- !u!114 &6334362184699423099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7397776606136921158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18f30c2bc4fdb0840bb01b6d4b325929, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 7397776606136921158}
+  respawnPoint: {fileID: 0}
