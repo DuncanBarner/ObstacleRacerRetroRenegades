@@ -50926,6 +50926,10 @@ PrefabInstance:
       propertyPath: slideColli
       value: 
       objectReference: {fileID: 1035645804}
+    - target: {fileID: 6714114111340612928, guid: c013b66dcfc6a8747980d05586fec3c1, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 8f62e36e5512dc541bccf3dd1f53e8f0, type: 2}
     - target: {fileID: 6714114111340612934, guid: c013b66dcfc6a8747980d05586fec3c1, type: 3}
       propertyPath: m_Name
       value: Player 2

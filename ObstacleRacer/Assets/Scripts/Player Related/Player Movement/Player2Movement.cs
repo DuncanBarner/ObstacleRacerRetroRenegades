@@ -54,6 +54,7 @@ public class Player2Movement : MonoBehaviour
     void Update()
     {
         horizontalInput = Input.GetAxis("Player2Horizontal");
+        animator.SetFloat("Speed", Mathf.Abs(horizontalInput));
 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
@@ -73,6 +74,7 @@ public class Player2Movement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             isJumping = true;
             jumpTimeCounter = 0;
+            animator.SetBool("IsJumping", true);
             SoundFXManager.instance.PlaySoundFXCLip(jumpSoundClip, transform, 1f);
         }
         WallJump();
@@ -82,6 +84,7 @@ public class Player2Movement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * variableJumpHeightMultiplier);
             isJumping = false;
+            animator.SetBool("IsJumping", false);
         }
         if (rb.velocity.y < 0 && !isGrounded)
         {
@@ -149,12 +152,14 @@ public class Player2Movement : MonoBehaviour
             isWallJumping = false;
             wallJumpingDirection = -transform.localScale.x;
             wallJumpingCounter = wallJumpingTime;
+            animator.SetBool("isOnWall", true);
 
             CancelInvoke(nameof(StopWallJumping));
         }
         else
         {
             wallJumpingCounter -= Time.deltaTime;
+            animator.SetBool("isOnWall", false);
         }
 
         if (Input.GetButtonDown("Player2Jump") && wallJumpingCounter > 0f)
