@@ -84,6 +84,7 @@ public class PlatformPlayerController : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * variableJumpHeightMultiplier);
             isJumping = false;
+            animator.SetBool("IsJumping", false);
         }
         if (rb.velocity.y < 0 && !isGrounded)
         {
@@ -142,6 +143,7 @@ public class PlatformPlayerController : MonoBehaviour
         {
             isWallSliding = true;
             rb.velocity  = new Vector2(rb.velocity.x,Mathf.Clamp(rb.velocity.y,-wallSlidingSpeed,float.MaxValue));
+
         }
         else
         {
@@ -156,15 +158,19 @@ public class PlatformPlayerController : MonoBehaviour
             isWallJumping = false;
             wallJumpingDirection = -transform.localScale.x;
             wallJumpingCounter = wallJumpingTime;
+            animator.SetBool("isOnWall", true);
+
 
             CancelInvoke(nameof(StopWallJumping));
         }
         else
         {
             wallJumpingCounter -= Time.deltaTime;
+            animator.SetBool("isOnWall", false);
+
         }
 
-        if(Input.GetButtonDown("Jump") && wallJumpingCounter>0f)
+        if (Input.GetButtonDown("Jump") && wallJumpingCounter>0f)
         {
             isWallJumping = true;
             if (wallJumpingDirection > 0)
@@ -198,10 +204,7 @@ public class PlatformPlayerController : MonoBehaviour
             Invoke(nameof(StopWallJumping), wallJumpingDuration);
         }
     }
-    public void OnLanding()
-    {
-        animator.SetBool("IsJumping", false);
-    }
+   
     private void StopWallJumping()
     {
         isWallJumping = false;
