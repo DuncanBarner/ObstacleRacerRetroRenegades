@@ -50642,10 +50642,6 @@ PrefabInstance:
       propertyPath: respawnPoint
       value: 
       objectReference: {fileID: 82929611}
-    - target: {fileID: 7397776605402510095, guid: 284479a1168244c4681a194b88c36b63, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.58
-      objectReference: {fileID: 0}
     - target: {fileID: 7397776606136921158, guid: 284479a1168244c4681a194b88c36b63, type: 3}
       propertyPath: m_Name
       value: Player 1
@@ -50919,17 +50915,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3469964546831594666, guid: c013b66dcfc6a8747980d05586fec3c1, type: 3}
-      propertyPath: slideSFX2
-      value: 
-      objectReference: {fileID: 8300000, guid: 3e7ae407dcfba5444acfa345169527d0, type: 3}
-    - target: {fileID: 3469964546831594666, guid: c013b66dcfc6a8747980d05586fec3c1, type: 3}
       propertyPath: slideColli
       value: 
       objectReference: {fileID: 1035645804}
-    - target: {fileID: 6714114111340612928, guid: c013b66dcfc6a8747980d05586fec3c1, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 8f62e36e5512dc541bccf3dd1f53e8f0, type: 2}
     - target: {fileID: 6714114111340612934, guid: c013b66dcfc6a8747980d05586fec3c1, type: 3}
       propertyPath: m_Name
       value: Player 2
@@ -50977,10 +50965,6 @@ PrefabInstance:
     - target: {fileID: 6714114111340613055, guid: c013b66dcfc6a8747980d05586fec3c1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6714114111387853343, guid: c013b66dcfc6a8747980d05586fec3c1, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.56
       objectReference: {fileID: 0}
     - target: {fileID: 9096346684893092789, guid: c013b66dcfc6a8747980d05586fec3c1, type: 3}
       propertyPath: respawnPoint
