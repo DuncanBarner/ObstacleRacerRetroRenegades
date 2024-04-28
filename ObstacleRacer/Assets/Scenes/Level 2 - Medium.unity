@@ -50642,6 +50642,10 @@ PrefabInstance:
       propertyPath: respawnPoint
       value: 
       objectReference: {fileID: 82929611}
+    - target: {fileID: 7397776605402510095, guid: 284479a1168244c4681a194b88c36b63, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.58
+      objectReference: {fileID: 0}
     - target: {fileID: 7397776606136921158, guid: 284479a1168244c4681a194b88c36b63, type: 3}
       propertyPath: m_Name
       value: Player 1
@@ -50652,11 +50656,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7397776606136921164, guid: 284479a1168244c4681a194b88c36b63, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 211
+      value: -16.71
       objectReference: {fileID: 0}
     - target: {fileID: 7397776606136921164, guid: 284479a1168244c4681a194b88c36b63, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 115.8
+      value: 31.92
       objectReference: {fileID: 0}
     - target: {fileID: 7397776606136921164, guid: 284479a1168244c4681a194b88c36b63, type: 3}
       propertyPath: m_LocalPosition.z
@@ -50932,11 +50936,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6714114111340613055, guid: c013b66dcfc6a8747980d05586fec3c1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 211.20001
+      value: -16.50999
       objectReference: {fileID: 0}
     - target: {fileID: 6714114111340613055, guid: c013b66dcfc6a8747980d05586fec3c1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 120.670006
+      value: 36.79
       objectReference: {fileID: 0}
     - target: {fileID: 6714114111340613055, guid: c013b66dcfc6a8747980d05586fec3c1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -50969,6 +50973,10 @@ PrefabInstance:
     - target: {fileID: 6714114111340613055, guid: c013b66dcfc6a8747980d05586fec3c1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6714114111387853343, guid: c013b66dcfc6a8747980d05586fec3c1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.56
       objectReference: {fileID: 0}
     - target: {fileID: 9096346684893092789, guid: c013b66dcfc6a8747980d05586fec3c1, type: 3}
       propertyPath: respawnPoint

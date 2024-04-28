@@ -54,6 +54,7 @@ public class PlatformPlayerController : MonoBehaviour
     void Update()
     {
         horizontalInput = Input.GetAxis("Horizontal");
+        animator.SetFloat("Speed", Mathf.Abs(horizontalInput));
 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
@@ -73,6 +74,7 @@ public class PlatformPlayerController : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             isJumping = true;
             jumpTimeCounter = 0;
+            animator.SetBool("IsJumping", true);
             SoundFXManager.instance.PlaySoundFXCLip(jumpSoundClip, transform, 1f);
         }
         WallJump();
@@ -87,7 +89,7 @@ public class PlatformPlayerController : MonoBehaviour
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * (fallingSpeed - 1) * Time.deltaTime;
         }
-
+        
         WallSlide();
     }
 
@@ -196,7 +198,10 @@ public class PlatformPlayerController : MonoBehaviour
             Invoke(nameof(StopWallJumping), wallJumpingDuration);
         }
     }
-
+    public void OnLanding()
+    {
+        animator.SetBool("IsJumping", false);
+    }
     private void StopWallJumping()
     {
         isWallJumping = false;
