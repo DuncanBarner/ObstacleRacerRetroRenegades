@@ -49744,6 +49744,36 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4470635361353287411, guid: 3aa3f9ad93ea9e6449f08609798f941d, type: 3}
   m_PrefabInstance: {fileID: 754795143}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &490837988
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 490837989}
+  m_Layer: 0
+  m_Name: 'Keep '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &490837989
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490837988}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 499.71356, y: 257.77173, z: -106.48569}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &510929982 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9118837813354197150, guid: 3cc9912d4f00aa7438b398d3774e7635, type: 3}
