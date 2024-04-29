@@ -9,6 +9,6 @@ public class RespawnScript : MonoBehaviour
 
     public void respawn()
     {
-        player.transform.position = respawnPoint.transform.position;
+        player.transform.position = new Vector3(respawnPoint.transform.position.x,respawnPoint.transform.position.y);
     }
 }

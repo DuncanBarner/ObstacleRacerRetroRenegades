@@ -21,6 +21,11 @@ public class Player2Slide : MonoBehaviour
         timePassed += Time.deltaTime;
         if (Input.GetKeyDown(KeyCode.RightShift) && !pC.OnWall() && slideCD < timePassed && !PauseMenu.isPaused)
             slide();
+
+        if (isSliding && pC.OnWall())
+        {
+            stopNow();
+        }
     }
 
     private void slide()
@@ -46,6 +51,15 @@ public class Player2Slide : MonoBehaviour
     {
         yield return new WaitForSeconds(0.1f);
         //animator.Play("");
+        animator.SetBool("isSliding", false);
+        regularColli.enabled = true;
+        slideColli.enabled = false;
+        isSliding = false;
+        timePassed = 0.0f;
+    }
+
+    private void stopNow()
+    {
         animator.SetBool("isSliding", false);
         regularColli.enabled = true;
         slideColli.enabled = false;

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Game Music
   - Player2
+  - timer
   layers:
   - Default
   - TransparentFX

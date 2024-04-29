@@ -11,21 +11,23 @@ public class PlatformPlayerController : MonoBehaviour
     public Transform groundCheck;
     public float groundCheckRadius = 0.2f;
     
-    public float coyoteTime = 0.1f;
-    public float variableJumpHeightMultiplier = 0.5f;
-    public float fallingSpeed = 2f;
 
-    //wall jump
+    //wall sliding
     private bool isWallSliding;
     private float wallSlidingSpeed = 2f;
 
+
+    [Header("Jump related")]
+    public float coyoteTime = 0.1f;
+    public float variableJumpHeightMultiplier = 0.5f;
+    public float fallingSpeed = 2f;
     private Rigidbody2D rb;
     private bool isGrounded;
     private float horizontalInput;
     private bool isJumping;
     private float jumpTimeCounter;
 
-    //Walljump related vars
+    [Header("WallJump related")]
     public Vector2 wallJumpPower = new Vector2(8f, 16f);
     public AudioClip wallJump;
     private bool isWallJumping;
@@ -34,12 +36,12 @@ public class PlatformPlayerController : MonoBehaviour
     private float wallJumpingCounter;
     private float wallJumpingDuration = 0.2f;
     [SerializeField] ForceMode2D forceMode;
-    
+    [SerializeField] private Transform wallCheck;
+    [SerializeField] private LayerMask wallLayer;
+
     private Animator animator;
     [SerializeField] private AudioClip jumpSoundClip;
    
-    [SerializeField] private Transform wallCheck;
-    [SerializeField] private LayerMask wallLayer;
     public playerSlide pS;
     void Start()
     {
