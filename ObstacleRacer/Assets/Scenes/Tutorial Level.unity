@@ -726,8 +726,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 917dbd6150fcb784bb1a6c908d0db4de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player1Tag: Player
-  player2Tag: Player2
+  player1: {fileID: 2127479841}
+  player2: {fileID: 860228911}
+  area1: {fileID: 674125980}
+  area2: {fileID: 2031918315}
+  mediumLevelIndex: 3
 --- !u!1 &808300253
 GameObject:
   m_ObjectHideFlags: 0
@@ -899,6 +902,11 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!4 &860228911 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6714114111340613055, guid: c013b66dcfc6a8747980d05586fec3c1, type: 3}
+  m_PrefabInstance: {fileID: 1207633117}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &868899783
 GameObject:
   m_ObjectHideFlags: 0
@@ -1639,7 +1647,6 @@ GameObject:
   - component: {fileID: 1328582439}
   - component: {fileID: 1328582438}
   - component: {fileID: 1328582440}
-  - component: {fileID: 1328582441}
   m_Layer: 3
   m_Name: Player1Exit
   m_TagString: Untagged
@@ -1739,20 +1746,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.238447, y: 0.94299793}
   m_EdgeRadius: 0
---- !u!114 &1328582441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1328582437}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 917dbd6150fcb784bb1a6c908d0db4de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player1Tag: Player
-  player2Tag: Player2
 --- !u!1 &1666042411
 GameObject:
   m_ObjectHideFlags: 0
@@ -1764,7 +1757,6 @@ GameObject:
   - component: {fileID: 1666042413}
   - component: {fileID: 1666042412}
   - component: {fileID: 1666042414}
-  - component: {fileID: 1666042415}
   m_Layer: 3
   m_Name: Player2Exit
   m_TagString: Untagged
@@ -1864,20 +1856,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.2315865, y: 0.9479685}
   m_EdgeRadius: 0
---- !u!114 &1666042415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1666042411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 917dbd6150fcb784bb1a6c908d0db4de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player1Tag: Player
-  player2Tag: Player2
 --- !u!1 &1936982844
 GameObject:
   m_ObjectHideFlags: 0
@@ -2117,7 +2095,6 @@ GameObject:
   - component: {fileID: 2031918315}
   - component: {fileID: 2031918316}
   - component: {fileID: 2031918317}
-  - component: {fileID: 2031918318}
   m_Layer: 3
   m_Name: Square (1)
   m_TagString: Untagged
@@ -2216,20 +2193,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.3393457, y: 1.5973687}
   m_EdgeRadius: 0
---- !u!114 &2031918318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2031918314}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 917dbd6150fcb784bb1a6c908d0db4de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player1Tag: Player
-  player2Tag: Player2
 --- !u!1 &2104631124
 GameObject:
   m_ObjectHideFlags: 0
@@ -9524,6 +9487,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!4 &2127479841 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7397776606136921164, guid: 284479a1168244c4681a194b88c36b63, type: 3}
+  m_PrefabInstance: {fileID: 1271259378}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2129868105
 GameObject:
   m_ObjectHideFlags: 0
