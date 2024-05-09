@@ -112,6 +112,9 @@ public class Player2Movement : MonoBehaviour
         if (horizontalInput > 0 && !PauseMenu.isPaused)
         {
             transform.localScale = new Vector3(1f, 1f, 1f); // Facing right
+            
+           
+
         }
         else if (horizontalInput < 0 && !PauseMenu.isPaused)
         {
