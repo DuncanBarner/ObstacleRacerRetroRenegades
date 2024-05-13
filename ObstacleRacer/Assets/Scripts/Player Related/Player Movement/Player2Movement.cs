@@ -47,7 +47,7 @@ public class Player2Movement : MonoBehaviour
         animator = GetComponent<Animator>();
         if (groundCheck == null)
         {
-            Debug.LogError("GroundCheck not assigned to the player controller!");
+            Debug.LogError("GroundCheck not assigned to the player 2 controller!");
         }
     }
 

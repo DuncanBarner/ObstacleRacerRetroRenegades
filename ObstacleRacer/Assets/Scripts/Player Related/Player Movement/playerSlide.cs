@@ -11,6 +11,7 @@ public class playerSlide: MonoBehaviour
     public CapsuleCollider2D slideColli;
     public float slideSpeed = 800f;
     public float slideCD = 1.5f;
+    public float slideDuration = 0.15f;
     public bool isSliding = false;
     public ForceMode2D forceMode;
     public AudioClip slideSFX;
@@ -49,7 +50,7 @@ public class playerSlide: MonoBehaviour
 
     IEnumerator stopSlide()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(slideDuration);
         animator.SetBool("isSliding", false);
         regularColli.enabled = true;
         slideColli.enabled = false;
