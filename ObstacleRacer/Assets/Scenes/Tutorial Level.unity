@@ -737,7 +737,7 @@ MonoBehaviour:
   player2: {fileID: 860228911}
   area1: {fileID: 674125980}
   area2: {fileID: 2031918315}
-  mediumLevelIndex: 3
+  mediumLevelIndex: 2
 --- !u!1 &808300253
 GameObject:
   m_ObjectHideFlags: 0

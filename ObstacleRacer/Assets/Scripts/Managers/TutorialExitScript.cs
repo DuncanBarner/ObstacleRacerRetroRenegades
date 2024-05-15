@@ -7,7 +7,7 @@ public class TutorialExitScript : MonoBehaviour
     public Transform player2;
     public Transform area1;
     public Transform area2;
-    public int mediumLevelIndex = 3;
+    public int mediumLevelIndex = 2;
 
     private void Update()
     {
