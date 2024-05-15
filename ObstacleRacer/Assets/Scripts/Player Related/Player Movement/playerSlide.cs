@@ -15,6 +15,7 @@ public class playerSlide: MonoBehaviour
     public bool isSliding = false;
     public ForceMode2D forceMode;
     public AudioClip slideSFX;
+    public CapsuleCollider2D[] playerTwoColliders;
 
     private float timePassed = 0.0f;
     private void Update()
@@ -45,6 +46,7 @@ public class playerSlide: MonoBehaviour
 
         SoundFXManager.instance.PlaySoundFXCLip(slideSFX, transform, 1f);
 
+
         StartCoroutine("stopSlide");
     }
 
@@ -68,5 +70,14 @@ public class playerSlide: MonoBehaviour
     }
 
     public bool getIsSliding() { return isSliding; }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.collider.Equals(playerTwoColliders[0]) || other.collider.Equals(playerTwoColliders[1]))
+        {
+            slideColli.enabled = false;
+        }
+    }
+
 
 }

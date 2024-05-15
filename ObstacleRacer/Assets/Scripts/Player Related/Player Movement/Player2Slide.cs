@@ -15,6 +15,7 @@ public class Player2Slide : MonoBehaviour
     public bool isSliding = false;
     public ForceMode2D forceMode;
     public AudioClip slideSFX2;
+    public CapsuleCollider2D[] playerOneColliders;
 
     private float timePassed = 0.0f;
     private void Update()
@@ -69,5 +70,13 @@ public class Player2Slide : MonoBehaviour
     }
 
     public bool getIsSliding() { return isSliding; }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.collider.Equals(playerOneColliders[0]) || other.collider.Equals(playerOneColliders[1]))
+        {
+            slideColli.enabled = false;
+        }
+    }
 
 }
