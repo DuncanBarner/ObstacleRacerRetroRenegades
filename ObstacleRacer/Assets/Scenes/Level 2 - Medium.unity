@@ -93589,11 +93589,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 492ff6a7454ae8440817d68f4b019677, type: 3}
---- !u!70 &1035645804 stripped
-CapsuleCollider2D:
-  m_CorrespondingSourceObject: {fileID: 5619634686805385290, guid: 284479a1168244c4681a194b88c36b63, type: 3}
-  m_PrefabInstance: {fileID: 1407053398}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1048162006
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -95214,6 +95209,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 492ff6a7454ae8440817d68f4b019677, type: 3}
+--- !u!70 &1569525183 stripped
+CapsuleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 6714114112202849909, guid: c013b66dcfc6a8747980d05586fec3c1, type: 3}
+  m_PrefabInstance: {fileID: 6714114112852535357}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1571228418
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -96704,7 +96704,7 @@ PrefabInstance:
     - target: {fileID: 3469964546831594666, guid: c013b66dcfc6a8747980d05586fec3c1, type: 3}
       propertyPath: slideColli
       value: 
-      objectReference: {fileID: 1035645804}
+      objectReference: {fileID: 1569525183}
     - target: {fileID: 3469964546831594666, guid: c013b66dcfc6a8747980d05586fec3c1, type: 3}
       propertyPath: slideDuration
       value: 0.2
