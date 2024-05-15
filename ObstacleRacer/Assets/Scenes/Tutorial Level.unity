@@ -1611,6 +1611,10 @@ PrefabInstance:
       propertyPath: slideColli
       value: 
       objectReference: {fileID: 372866670}
+    - target: {fileID: 3469964546831594666, guid: c013b66dcfc6a8747980d05586fec3c1, type: 3}
+      propertyPath: slideDuration
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6714114111340612934, guid: c013b66dcfc6a8747980d05586fec3c1, type: 3}
       propertyPath: m_Name
       value: Player 2
@@ -1753,6 +1757,10 @@ PrefabInstance:
     - target: {fileID: 1380872393, guid: 284479a1168244c4681a194b88c36b63, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5619634685879420092, guid: 284479a1168244c4681a194b88c36b63, type: 3}
+      propertyPath: slideDuration
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 7397776606136921158, guid: 284479a1168244c4681a194b88c36b63, type: 3}
       propertyPath: m_Name
