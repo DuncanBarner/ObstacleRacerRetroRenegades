@@ -293,6 +293,11 @@ RectTransform:
   m_AnchoredPosition: {x: -9.45, y: -10.1}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!70 &69155088 stripped
+CapsuleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 7397776606136921152, guid: 284479a1168244c4681a194b88c36b63, type: 3}
+  m_PrefabInstance: {fileID: 1271259378}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &146828763 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1106442639989395951, guid: 3aa3f9ad93ea9e6449f08609798f941d, type: 3}
@@ -1615,6 +1620,18 @@ PrefabInstance:
       propertyPath: slideDuration
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 3469964546831594666, guid: c013b66dcfc6a8747980d05586fec3c1, type: 3}
+      propertyPath: playerOneColliders.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3469964546831594666, guid: c013b66dcfc6a8747980d05586fec3c1, type: 3}
+      propertyPath: playerOneColliders.Array.data[0]
+      value: 
+      objectReference: {fileID: 69155088}
+    - target: {fileID: 3469964546831594666, guid: c013b66dcfc6a8747980d05586fec3c1, type: 3}
+      propertyPath: playerOneColliders.Array.data[1]
+      value: 
+      objectReference: {fileID: 1431667834}
     - target: {fileID: 6714114111340612934, guid: c013b66dcfc6a8747980d05586fec3c1, type: 3}
       propertyPath: m_Name
       value: Player 2
@@ -1673,6 +1690,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c013b66dcfc6a8747980d05586fec3c1, type: 3}
+--- !u!70 &1207633118 stripped
+CapsuleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 6714114111340612930, guid: c013b66dcfc6a8747980d05586fec3c1, type: 3}
+  m_PrefabInstance: {fileID: 1207633117}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1210515702
 GameObject:
   m_ObjectHideFlags: 0
@@ -1762,6 +1784,18 @@ PrefabInstance:
       propertyPath: slideDuration
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 5619634685879420092, guid: 284479a1168244c4681a194b88c36b63, type: 3}
+      propertyPath: playerTwoColliders.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5619634685879420092, guid: 284479a1168244c4681a194b88c36b63, type: 3}
+      propertyPath: playerTwoColliders.Array.data[0]
+      value: 
+      objectReference: {fileID: 1207633118}
+    - target: {fileID: 5619634685879420092, guid: 284479a1168244c4681a194b88c36b63, type: 3}
+      propertyPath: playerTwoColliders.Array.data[1]
+      value: 
+      objectReference: {fileID: 372866670}
     - target: {fileID: 7397776606136921158, guid: 284479a1168244c4681a194b88c36b63, type: 3}
       propertyPath: m_Name
       value: PlatformerPlayerV2
@@ -1926,6 +1960,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.238447, y: 0.94299793}
   m_EdgeRadius: 0
+--- !u!70 &1431667834 stripped
+CapsuleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 5619634686805385290, guid: 284479a1168244c4681a194b88c36b63, type: 3}
+  m_PrefabInstance: {fileID: 1271259378}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1666042411
 GameObject:
   m_ObjectHideFlags: 0
